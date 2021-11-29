@@ -1,5 +1,17 @@
-<ul>
-  <li routerLink="/cart">cart</li>
-  <li routerLink="/products">products</li>
-</ul>
-<router-outlet></router-outlet>
+<div class="app-shell">
+  <div class="app-shell__header">
+    <div class="container">
+      <router-outlet name="header"></router-outlet>
+    </div>
+  </div>
+  <div class="app-shell__body">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="app-shell__footer">
+    <div class="container">
+      <router-outlet name="footer"></router-outlet>
+    </div>
+  </div>
+</div>

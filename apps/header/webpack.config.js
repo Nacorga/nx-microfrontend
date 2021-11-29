@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "products",
+    uniqueName: "header",
     publicPath: "auto"
   },
   optimization: {
@@ -23,10 +23,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'products',
+      name: 'header',
       filename: 'remoteEntry.js',
       exposes: {
-        './Module': './apps/products/src/app/app.module.ts',
+        './Module': './apps/header/src/app/app.module.ts',
       },
       shared: share({
         "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
